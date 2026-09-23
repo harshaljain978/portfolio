@@ -1,0 +1,196 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Harshal Jain — Portfolio</title><meta name="description" content="Harshal Jain — Computer Science, design, content and community leadership."><style>
+:root{
+ --bg:#f5f4ef;--paper:#fbfaf7;--ink:#171717;--muted:#74736d;--line:#d9d7cf;
+ --dark:#151515;--white:#fff;--accent:#c8a66a;--pad:clamp(22px,5vw,76px);
+ --max:1240px;--ease:cubic-bezier(.22,1,.36,1)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit}
+::selection{background:var(--ink);color:#fff}
+.nav{position:fixed;z-index:50;inset:0 0 auto;height:74px;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;background:rgba(245,244,239,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.05)}
+.logo{font-weight:700;letter-spacing:-.03em}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:28px;color:var(--muted);font-size:.88rem}.navlinks a:hover{color:var(--ink)}
+.container{width:min(var(--max),100%);margin:auto;padding-left:var(--pad);padding-right:var(--pad)}
+.hero{min-height:100svh;display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center;padding-top:100px;padding-bottom:70px}
+.kicker,.section-kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);display:flex;gap:10px;align-items:center}
+.kicker:before,.section-kicker:before{content:"";width:28px;height:1px;background:currentColor}
+.hero h1{font-size:clamp(4.8rem,11.5vw,10.5rem);line-height:.82;letter-spacing:-.075em;margin-top:28px;font-weight:750}
+.hero h1 em{font-style:normal;color:var(--muted)}
+.hero-intro{margin-top:46px;max-width:650px;font-size:clamp(1.35rem,2.7vw,2.15rem);line-height:1.13;letter-spacing:-.035em;font-weight:600}
+.hero-small{margin-top:16px;color:var(--muted);max-width:560px}
+.hero-photo{position:relative;align-self:end;justify-self:end;width:min(100%,390px)}
+.photo-frame{aspect-ratio:4/5;background:#e5e2da;overflow:hidden;position:relative}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-placeholder{position:absolute;inset:0;display:grid;place-items:center;padding:25px;text-align:center;color:#8d8a80;font-size:.82rem;text-transform:uppercase;letter-spacing:.12em}
+.photo-note{font-size:.72rem;color:var(--muted);margin-top:10px}
+.social-row{display:flex;gap:14px;margin-top:22px;flex-wrap:wrap}
+.social-row a{border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:.78rem;transition:.25s}
+.social-row a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.section{padding-top:130px;padding-bottom:130px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:55px}
+.section-head h2{font-size:clamp(2.5rem,6vw,5rem);line-height:.9;letter-spacing:-.06em;margin-top:15px}
+.section-number{font-size:.72rem;color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;border-top:1px solid var(--line);padding-top:35px}
+.about-grid .large{font-size:clamp(1.25rem,2.3vw,1.8rem);line-height:1.35;letter-spacing:-.025em}
+.about-grid .muted{color:var(--muted);max-width:55ch}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.card{min-height:340px;padding:30px 26px 35px;border-right:1px solid var(--line);display:flex;flex-direction:column}
+.card:last-child{border-right:0}.card-num{color:var(--muted);font-size:.72rem}.card h3{font-size:clamp(1.6rem,2.7vw,2.25rem);letter-spacing:-.045em;margin-top:auto;line-height:1}
+.card p{color:var(--muted);margin-top:15px;font-size:.9rem}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}.chip{border:1px solid var(--line);border-radius:999px;padding:6px 9px;font-size:.68rem;color:var(--muted)}
+.dark-section{background:var(--dark);color:#f5f3ed;margin-top:0}
+.dark-section .section-kicker{color:#a7a49b}.dark-section .section-head{border-color:#383733}
+.dark-section .section-head h2{color:#f5f3ed}
+.project{display:grid;grid-template-columns:110px 1fr auto;gap:28px;padding:28px 0;border-top:1px solid #373633;align-items:start}
+.project:last-child{border-bottom:1px solid #373633}
+.project-num{color:#8e8b83;font-size:.78rem}.project h3{font-size:clamp(1.5rem,2.5vw,2.2rem);letter-spacing:-.035em}.project p{color:#aaa79f;max-width:650px;margin-top:7px;font-size:.92rem}.project-tag{color:#a7a49b;font-size:.72rem;white-space:nowrap}
+.design-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:25px}
+.design-box{background:#e9e6de;min-height:350px;padding:30px;display:flex;flex-direction:column;justify-content:end;overflow:hidden}
+.design-box.dark{background:#222;color:#fff}.design-box h3{font-size:clamp(2rem,4vw,4rem);letter-spacing:-.06em;line-height:.9}.design-box p{color:#77736b;margin-top:12px;max-width:38ch}.design-box.dark p{color:#aaa}
+.timeline{border-top:1px solid var(--line)}
+.role{display:grid;grid-template-columns:180px 1fr 170px;gap:30px;padding:28px 0;border-bottom:1px solid var(--line)}
+.role .date,.role .type{color:var(--muted);font-size:.78rem}.role h3{font-size:1.35rem;letter-spacing:-.03em}.role p{color:var(--muted);font-size:.9rem;margin-top:6px;max-width:650px}
+.contact{background:#e7e3da;padding-top:100px;padding-bottom:100px}.contact h2{font-size:clamp(3rem,8vw,8rem);line-height:.82;letter-spacing:-.075em;margin:25px 0 35px}.contact-mail{font-size:clamp(1.2rem,2.5vw,2rem);border-bottom:1px solid var(--ink);display:inline-block;padding-bottom:4px}
+footer{padding:28px var(--pad);display:flex;justify-content:space-between;color:var(--muted);font-size:.72rem}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.reveal.in{opacity:1;transform:none}
+@media(max-width:800px){
+ .hero{grid-template-columns:1fr;padding-top:120px}.hero-photo{justify-self:start;width:min(65vw,310px)}
+ .about-grid,.design-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.card{border-right:0;border-bottom:1px solid var(--line);min-height:270px}.card:last-child{border-bottom:0}
+ .project{grid-template-columns:55px 1fr}.project-tag{grid-column:2}.role{grid-template-columns:1fr}.role .type{order:3}
+ .navlinks{gap:14px}.navlinks a:nth-child(2){display:none}
+}
+@media(max-width:520px){.hero h1{font-size:20vw}.section{padding-top:90px;padding-bottom:90px}.hero-photo{width:75vw}.contact h2{font-size:20vw}footer{display:block}footer span{display:block;margin-top:5px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+</style></head><body>
+<header class="nav">
+  <a class="logo" href="#top">HJ<span>.</span></a>
+  <nav class="navlinks"><a href="#about">About</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main id="top">
+<section class="container hero">
+  <div>
+    <div class="kicker">Computer Science · Design · Social Impact</div>
+    <h1>Harshal<br><em>Jain.</em></h1>
+    <p class="hero-intro">I work where technology, creativity and people meet.</p>
+    <p class="hero-small">Computer Science graduate with hands-on experience in data, web development, design, content, sales, leadership and community-driven initiatives.</p>
+    <div class="social-row">
+      <a href="https://www.linkedin.com/in/harshaljain978/" target="_blank">LinkedIn ↗</a>
+      <a href="https://github.com/harshaljain978" target="_blank">GitHub ↗</a>
+      <a href="https://www.instagram.com/" target="_blank">Instagram ↗</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <div class="photo-frame">
+      <img id="photo1" src="profile-photo-1.jpg" alt="Harshal Jain portrait" onerror="this.style.display='none'">
+      <div class="photo-placeholder">Add your main portrait<br>as profile-photo-1.jpg</div>
+    </div>
+    <div class="photo-note">Portrait / personal identity</div>
+  </div>
+</section>
+
+<section class="container section reveal" id="about">
+  <div class="section-head"><div><div class="section-kicker">01 · About</div><h2>Three sides.<br>One profile.</h2></div><div class="section-number">Academic / Creative / CSR</div></div>
+  <div class="about-grid">
+    <p class="large">My background sits across computer science, creative communication and people-focused leadership. I enjoy turning ideas into practical digital experiences.</p>
+    <div>
+      <p class="muted">I graduated in Computer Science Engineering from Dr. D. Y. Patil Institute of Engineering, Management and Research, Pune. Alongside academics, I built projects in Python, SQL, web development and machine learning while developing a strong interest in design and content.</p>
+      <p class="muted" style="margin-top:18px">Outside technical work, I have led student teams, managed social media and contributed to community and entrepreneurship initiatives.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container section reveal">
+  <div class="section-head"><div><div class="section-kicker">02 · What I do</div><h2>Different skills.<br>Same curiosity.</h2></div></div>
+  <div class="cards">
+    <article class="card">
+      <span class="card-num">01 / ACADEMIC</span>
+      <h3>Technology<br>& Data</h3>
+      <p>Computer Science, Python, SQL, data analytics, machine learning, front-end development and practical software projects.</p>
+      <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Pandas</span><span class="chip">ML</span><span class="chip">HTML/CSS/JS</span></div>
+    </article>
+    <article class="card">
+      <span class="card-num">02 / CREATIVE</span>
+      <h3>Design<br>& Content</h3>
+      <p>Visual design, UI/UX fundamentals, social media creatives, reels, branding and content strategy.</p>
+      <div class="chips"><span class="chip">Canva</span><span class="chip">Figma</span><span class="chip">UI/UX</span><span class="chip">Editing</span><span class="chip">Content</span></div>
+    </article>
+    <article class="card">
+      <span class="card-num">03 / CSR & LEADERSHIP</span>
+      <h3>People<br>& Impact</h3>
+      <p>Student leadership, volunteering, event coordination, team handling, outreach, communication and community-oriented initiatives.</p>
+      <div class="chips"><span class="chip">Rotaract</span><span class="chip">ED Cell</span><span class="chip">NASSCOM</span><span class="chip">Events</span></div>
+    </article>
+  </div>
+</section>
+
+<section class="dark-section section reveal" id="work">
+<div class="container">
+  <div class="section-head"><div><div class="section-kicker">03 · Selected work</div><h2>Built,<br>tested & shipped.</h2></div></div>
+  <div class="project"><span class="project-num">01</span><div><h3>Meenu's, Udaipur</h3><p>Website for a family hospitality and cultural experience business, connecting cooking classes, walking tours and local experiences with a digital audience.</p></div><span class="project-tag">Web / HTML CSS JS</span></div>
+  <div class="project"><span class="project-num">02</span><div><h3>Dual-Mode Expression Interpreter</h3><p>Final-year project combining real-time sign-language and emotion understanding using computer vision, MediaPipe, CNNs, landmark fusion and text-to-speech.</p></div><span class="project-tag">AI / Computer Vision</span></div>
+  <div class="project"><span class="project-num">03</span><div><h3>Bill Generator</h3><p>Billing and invoice workflow with GST, discounts, item management and print/PDF-ready output.</p></div><span class="project-tag">JavaScript</span></div>
+  <div class="project"><span class="project-num">04</span><div><h3>House Price Prediction</h3><p>Machine-learning project exploring housing features and predictive models for estimated property prices.</p></div><span class="project-tag">Python / ML</span></div>
+  <div class="project"><span class="project-num">05</span><div><h3>Stock Price Prediction</h3><p>Exploration of stock trends and correlations followed by prediction experiments using a Random Forest model.</p></div><span class="project-tag">Python / Colab</span></div>
+</div>
+</section>
+
+<section class="container section reveal">
+  <div class="section-head"><div><div class="section-kicker">04 · Design</div><h2>Design is how<br>I communicate.</h2></div></div>
+  <div class="design-grid">
+    <div class="design-box"><h3>Canva<br>+ Content</h3><p>3+ years of hands-on design work across posters, social media, event communication and branded content.</p></div>
+    <div class="design-box dark"><h3>UI / UX<br>Thinking</h3><p>Learning Figma and interface design with a focus on hierarchy, clarity and useful experiences.</p></div>
+  </div>
+</section>
+
+<section class="container section reveal" id="experience">
+  <div class="section-head"><div><div class="section-kicker">05 · Experience</div><h2>People,<br>projects & leadership.</h2></div></div>
+  <div class="timeline">
+    <div class="role"><span class="date">2026</span><div><h3>Career Counselor / Inside Sales</h3><p>Intellipaat — client counselling, education sales, communication, CRM and target-oriented business development.</p></div><span class="type">Professional</span></div>
+    <div class="role"><span class="date">2024 — 2026</span><div><h3>ED Cell · Social Media & Content</h3><p>Led social-media and creative activities, content planning, branding, event promotion, team coordination and outreach.</p></div><span class="type">Leadership</span></div>
+    <div class="role"><span class="date">2023 — 2024</span><div><h3>Vice President · Rotaract Club DYPIEMR</h3><p>Student leadership, event coordination, volunteering, communication and community-oriented initiatives.</p></div><span class="type">CSR / Community</span></div>
+    <div class="role"><span class="date">2022 — 2023</span><div><h3>FutureSkills Prime / NASSCOM Campus Ambassador</h3><p>Campus outreach and promotion of technology learning opportunities among students.</p></div><span class="type">Ambassador</span></div>
+  </div>
+</section>
+
+<section class="container section reveal">
+  <div class="section-head"><div><div class="section-kicker">06 · Academic</div><h2>Learning that<br>became projects.</h2></div></div>
+  <div class="about-grid">
+    <p class="large">B.E. / B.Tech Computer Science Engineering<br>Dr. D. Y. Patil Institute of Engineering, Management and Research, Pune.</p>
+    <div>
+      <p class="muted">Core areas explored: programming, databases, web development, machine learning, deep learning, NLP, blockchain, high-performance computing and digital forensics.</p>
+      <div class="chips"><span class="chip">Python</span><span class="chip">MySQL</span><span class="chip">JavaScript</span><span class="chip">Machine Learning</span><span class="chip">Deep Learning</span><span class="chip">Git / GitHub</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="container section reveal">
+  <div class="section-head"><div><div class="section-kicker">07 · Social / My work</div><h2>Follow the<br>creative side.</h2></div></div>
+  <div class="design-grid">
+    <div class="design-box dark"><h3>Instagram<br>Work</h3><p>Use this space for your design posts, reels, AI experiments, photography, edits and creative work.</p><div class="social-row"><a href="https://www.instagram.com/" target="_blank">Instagram ↗</a></div></div>
+    <div class="design-box"><h3>ED Cell<br>Social</h3><p>Social-media and creative work from entrepreneurship and campus activities, including event promotion and content.</p><div class="social-row"><a href="https://www.instagram.com/rotaract_dypiemr/" target="_blank">Rotaract ↗</a></div></div>
+  </div>
+</section>
+</main>
+
+<section class="contact reveal" id="contact">
+<div class="container">
+  <div class="section-kicker">08 · Contact</div>
+  <h2>Let's make<br>something useful.</h2>
+  <a class="contact-mail" href="mailto:harshaljainudaipur11@gmail.com">harshaljainudaipur11@gmail.com</a>
+  <div class="social-row"><a href="https://www.linkedin.com/in/harshaljain978/" target="_blank">LinkedIn</a><a href="https://github.com/harshaljain978" target="_blank">GitHub</a><a href="https://www.instagram.com/" target="_blank">Instagram</a></div>
+</div>
+</section>
+
+<footer><span>© <span id="year"></span> Harshal Jain</span><span>Pune · Udaipur · India</span></footer>
+
+<script>
+(()=> {
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+ document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+ document.getElementById('year').textContent=new Date().getFullYear();
+})();
+</script>
+</body></html>
