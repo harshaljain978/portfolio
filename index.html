@@ -1,15 +1,15 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Harshal Jain — Portfolio</title><meta name="description" content="Harshal Jain — data analyst with a background in computer science, design and sales."><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Harshal Jain — Portfolio</title><meta name="description" content="Harshal Jain — data analyst with a background in computer science, design and sales."><meta name="theme-color" content="#f5f4ef"><style>
 :root{--bg:#f5f4ef;--paper:#fbfaf7;--ink:#171717;--muted:#74736d;--line:#d9d7cf;--dark:#151515;--accent:#c8a66a;--pad:clamp(22px,5vw,76px);--max:1240px;--ease:cubic-bezier(.22,1,.36,1)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:82px}
-body{background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue","Segoe UI",Inter,Roboto,Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
 ::selection{background:var(--ink);color:#fff}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:60}
-.nav{position:fixed;z-index:50;inset:0 0 auto;height:74px;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;background:rgba(245,244,239,.82);backdrop-filter:blur(18px);border-bottom:1px solid rgba(0,0,0,.05)}
+.progress{position:fixed;top:0;left:0;height:2px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:var(--accent);z-index:60}
+.nav{position:fixed;z-index:50;inset:0 0 auto;height:74px;padding:0 var(--pad);display:flex;align-items:center;justify-content:space-between;background:rgba(245,244,239,.82);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid rgba(0,0,0,.05)}
 .logo{font-weight:700;letter-spacing:-.03em}.logo span{color:var(--accent)}
-.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.86rem}.navlinks a{transition:color .25s}.navlinks a:hover,.navlinks a.on{color:var(--ink)}
+.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.86rem}.navlinks a{transition:color .3s var(--ease)}.navlinks a:hover,.navlinks a.on{color:var(--ink)}
 .menu{display:none;border:1px solid var(--line);background:none;border-radius:999px;padding:7px 16px;font-size:.8rem;cursor:pointer}
 .container{width:min(var(--max),100%);margin:auto;padding-left:var(--pad);padding-right:var(--pad)}
 .kicker,.section-kicker{font-size:.8rem;color:var(--muted);display:flex;gap:10px;align-items:center}
@@ -20,14 +20,14 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
 .hero-intro{margin-top:44px;max-width:650px;font-size:clamp(1.35rem,2.7vw,2.15rem);line-height:1.13;letter-spacing:-.035em;font-weight:600}
 .hero-small{margin-top:16px;color:var(--muted);max-width:560px}
 .cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;align-items:center}
-.btn{border:1px solid var(--ink);border-radius:999px;padding:11px 20px;font-size:.86rem;background:none;cursor:pointer;transition:.25s}
-.btn.solid{background:var(--ink);color:#fff}.btn:hover{transform:translateY(-2px)}
+.btn{border:1px solid var(--ink);border-radius:999px;padding:11px 20px;font-size:.86rem;background:none;cursor:pointer;transition:transform .4s var(--ease),background .3s,color .3s}
+.btn.solid{background:var(--ink);color:#fff}.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}
 .status{display:inline-flex;gap:8px;align-items:center;font-size:.8rem;color:var(--muted);margin-top:22px}
 .status:before{content:"";width:8px;height:8px;border-radius:50%;background:#3fae5d;box-shadow:0 0 0 4px rgba(63,174,93,.18)}
 .hero-photo{position:relative;justify-self:end;align-self:center;width:min(100%,380px)}
 .ph-back{position:absolute;inset:20px -20px -20px 20px;border:1px solid var(--accent);border-radius:30px;transition:transform .7s var(--ease)}
 .hero-photo:hover .ph-back{transform:translate(10px,10px)}
-.photo-frame{position:relative;aspect-ratio:4/5;background:#e5e2da;border-radius:28px;overflow:hidden;box-shadow:0 40px 70px -35px rgba(0,0,0,.4);transition:transform .4s var(--ease);will-change:transform}
+.photo-frame{position:relative;aspect-ratio:4/5;background:#e5e2da;border-radius:28px;overflow:hidden;box-shadow:0 40px 70px -35px rgba(0,0,0,.4);transition:transform .5s var(--ease);will-change:transform}
 .photo-frame img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block}
 .photo-placeholder{position:absolute;inset:0;display:grid;place-items:center;font-size:5rem;font-weight:750;letter-spacing:-.07em;color:#c9c5b8}
 .float{position:absolute;z-index:3;background:rgba(251,250,247,.82);backdrop-filter:blur(14px);border:1px solid rgba(0,0,0,.06);border-radius:999px;padding:9px 15px;font-size:.76rem;font-weight:600;box-shadow:0 14px 30px -14px rgba(0,0,0,.3);animation:fl 6s ease-in-out infinite}
@@ -40,41 +40,46 @@ a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;border-top:1px solid var(--line);padding-top:35px}
 .large{font-size:clamp(1.25rem,2.3vw,1.8rem);line-height:1.35;letter-spacing:-.025em}
 .muted{color:var(--muted);max-width:55ch}
-.stats{display:flex;gap:40px;margin-top:34px;flex-wrap:wrap}.stats b{display:block;font-size:2.2rem;letter-spacing:-.05em;line-height:1}.stats span{font-size:.8rem;color:var(--muted)}
 .switch{position:relative;display:inline-flex;max-width:100%;overflow-x:auto;padding:4px;background:#eceae3;border-radius:999px;margin-bottom:46px;scrollbar-width:none}
-.switch button{position:relative;z-index:2;border:0;background:transparent;color:#77736b;padding:10px 22px;border-radius:999px;cursor:pointer;font-size:.84rem;white-space:nowrap;transition:color .35s var(--ease)}
+.switch button{position:relative;z-index:2;border:0;background:transparent;color:#77736b;padding:10px 22px;border-radius:999px;cursor:pointer;font-size:.84rem;white-space:nowrap;transition:color .4s var(--ease)}
 .switch button.on{color:var(--ink)}
-.switch-pill{position:absolute;left:4px;top:4px;bottom:4px;width:90px;background:var(--paper);border-radius:999px;box-shadow:0 1px 5px rgba(0,0,0,.08);transition:transform .55s var(--ease),width .55s var(--ease)}
-.panel{display:none}.panel.active{display:block;animation:panelIn .6s var(--ease)}
-@keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.points{list-style:none;border-top:1px solid var(--line)}
-.points li{padding:16px 0;border-bottom:1px solid var(--line);font-size:.95rem}.points li b{display:block;font-size:1.05rem;letter-spacing:-.02em}.points li span{color:var(--muted);font-size:.86rem}
-.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}.chip{border:1px solid var(--line);border-radius:999px;padding:6px 11px;font-size:.72rem;color:var(--muted)}
-.link{display:inline-block;margin-top:26px;border-bottom:1px solid var(--ink);padding-bottom:3px;font-size:.9rem;cursor:pointer;background:none;border-top:0;border-left:0;border-right:0}
-.dark-section{background:var(--dark);color:#f5f3ed}
-.dark-section .section-kicker,.dark-section .section-note{color:#a7a49b}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
-.filters button{border:1px solid #3a3935;background:none;border-radius:999px;padding:8px 16px;font-size:.8rem;color:#a7a49b;cursor:pointer;transition:.25s}
-.filters button.on{background:#f5f3ed;color:var(--dark);border-color:#f5f3ed}
-.project{display:grid;grid-template-columns:70px 1fr auto;gap:28px;padding:28px 0;border-top:1px solid #373633;align-items:start;transition:padding .4s var(--ease)}
-.project[hidden]{display:none}.project:hover{padding-left:12px}
-.project-num{color:#8e8b83;font-size:.78rem}.project h3{font-size:clamp(1.5rem,2.5vw,2.2rem);letter-spacing:-.035em}.project p{color:#aaa79f;max-width:650px;margin-top:7px;font-size:.92rem}.project-tag{color:#a7a49b;font-size:.78rem;white-space:nowrap}
+.switch-pill{position:absolute;left:4px;top:4px;bottom:4px;width:90px;background:var(--paper);border-radius:999px;box-shadow:0 1px 5px rgba(0,0,0,.08);transition:transform .6s var(--ease),width .6s var(--ease)}
+#panel{min-height:520px}.in-p{animation:panelIn .7s var(--ease)}
+@keyframes panelIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.g{margin-bottom:26px}.g h4{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:2px}
+.points{list-style:none;border-top:1px solid var(--line);margin-bottom:6px}
+.points li{padding:16px 0;border-bottom:1px solid var(--line);font-size:.95rem;transition:padding .5s var(--ease)}.points li:hover{padding-left:10px}
+.points li b{display:flex;justify-content:space-between;gap:16px;font-size:1.05rem;letter-spacing:-.02em}.points li b i{font-style:normal;font-weight:500;font-size:.76rem;color:var(--muted);white-space:nowrap;padding-top:3px}.points li span{color:var(--muted);font-size:.86rem}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}.chip{border:1px solid var(--line);border-radius:999px;padding:6px 11px;font-size:.72rem;color:var(--muted);transition:.3s var(--ease)}.chip:hover{border-color:var(--ink);color:var(--ink)}
+.link{display:inline-block;margin-top:28px;border-bottom:1px solid var(--ink);padding-bottom:3px;font-size:.9rem;cursor:pointer;background:none;border-top:0;border-left:0;border-right:0;transition:padding .4s var(--ease)}.link:hover{padding-right:8px}
+.rot{display:inline-block;transition:opacity .6s var(--ease),transform .6s var(--ease)}.rot.o{opacity:0;transform:translateY(6px)}
 .grid2{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
 .cell{padding:28px 5px;border-bottom:1px solid var(--line)}
 .cell:nth-child(odd){padding-right:30px;border-right:1px solid var(--line)}.cell:nth-child(even){padding-left:30px}
 .meta{font-size:.78rem;color:var(--muted)}.cell h3{font-size:1.3rem;letter-spacing:-.025em;margin-top:6px}.cell p{font-size:.86rem;color:var(--muted);margin-top:5px;max-width:48ch}
-.timeline{border-top:1px solid var(--line)}
-.role{display:grid;grid-template-columns:160px 1fr 150px;gap:30px;padding:28px 0;border-bottom:1px solid var(--line)}
-.role .date,.role .type{color:var(--muted);font-size:.8rem}.role h3{font-size:1.35rem;letter-spacing:-.03em}.role p{color:var(--muted);font-size:.9rem;margin-top:6px;max-width:650px}
 .contact{background:#e7e3da;padding-top:100px;padding-bottom:100px}.contact h2{font-size:clamp(3rem,8vw,8rem);line-height:.82;letter-spacing:-.075em;margin:25px 0 35px}
 .contact-mail{font-size:clamp(1.2rem,2.5vw,2rem);border-bottom:1px solid var(--ink);display:inline-block;padding-bottom:4px}
 .social-row{display:flex;gap:12px;margin-top:26px;flex-wrap:wrap}
-.social-row a{border:1px solid #bdb9ad;border-radius:999px;padding:8px 14px;font-size:.8rem;transition:.25s}.social-row a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.social-row a,.social-row button{border:1px solid #bdb9ad;border-radius:999px;padding:8px 14px;font-size:.8rem;transition:.3s var(--ease);background:none;cursor:pointer}.social-row a:hover,.social-row button:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.msg{display:grid;gap:10px;max-width:520px;margin-top:40px}
+.msg input,.msg textarea{width:100%;border:1px solid #bdb9ad;background:rgba(255,255,255,.5);border-radius:16px;padding:12px 16px;font:inherit;font-size:.9rem;resize:none;transition:border-color .3s,background .3s}
+.msg input:focus,.msg textarea:focus{outline:0;border-color:var(--ink);background:#fff}
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,30px);opacity:0;background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-size:.8rem;z-index:70;pointer-events:none;transition:.5s var(--ease)}.toast.show{opacity:1;transform:translate(-50%,0)}
 footer{padding:28px var(--pad);display:flex;justify-content:space-between;color:var(--muted);font-size:.76rem}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s var(--ease),transform .9s var(--ease)}.reveal.in{opacity:1;transform:none}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1s var(--ease)}.reveal.in{opacity:1;transform:none}
+#resume{display:none}
+@media print{
+ @page{margin:14mm}
+ body{background:#fff}body>*:not(#resume){display:none!important}
+ #resume{display:block;font-size:10.5pt;line-height:1.4;color:#000}
+ #resume h1{font-size:24pt;letter-spacing:-.03em}#resume .sub{color:#444;margin-bottom:8px}
+ #resume h2{font-size:10pt;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #000;margin:14px 0 6px;padding-bottom:2px}
+ #resume .r{display:flex;justify-content:space-between;gap:12px;margin-top:6px}#resume .r b{font-weight:650}
+ #resume ul{margin:2px 0 0 16px}#resume p{margin-top:2px}
+}
 @media(max-width:980px){
  .menu{display:block}
- .navlinks{position:fixed;inset:74px 0 auto;background:rgba(245,244,239,.98);backdrop-filter:blur(18px);flex-direction:column;gap:0;padding:6px var(--pad) 20px;display:none;font-size:1.05rem}.navlinks.open{display:flex}.navlinks a{padding:14px 0;border-bottom:1px solid var(--line)}
+ .navlinks{position:fixed;inset:74px 0 auto;background:rgba(245,244,239,.98);backdrop-filter:blur(18px);flex-direction:column;gap:0;padding:6px var(--pad) 20px;display:none;font-size:1.05rem}.navlinks.open{display:flex;animation:panelIn .4s var(--ease)}.navlinks a{padding:14px 0;border-bottom:1px solid var(--line)}
 }
 @media(max-width:800px){
  .hero{grid-template-columns:1fr;padding-top:120px;gap:70px}.hero-photo{justify-self:start;width:min(70vw,320px);margin-left:6px}
@@ -85,13 +90,13 @@ footer{padding:28px var(--pad);display:flex;justify-content:space-between;color:
  .grid2{grid-template-columns:1fr}.cell:nth-child(odd){padding-right:5px;border-right:0}.cell:nth-child(even){padding-left:5px}
 }
 @media(max-width:520px){.hero h1{font-size:20vw}.section{padding-top:90px;padding-bottom:90px}.contact h2{font-size:20vw}footer{display:block}footer span{display:block;margin-top:5px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}.float{animation:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 </style></head><body>
 <div class="progress" id="progress"></div>
 <header class="nav">
   <a class="logo" href="#top">HJ<span>.</span></a>
   <nav class="navlinks" id="navlinks" aria-label="Sections">
-    <a href="#about">About</a><a href="#explore">Explore</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#activities">Activities</a><a href="#credentials">Credentials</a><a href="#contact">Contact</a>
+    <a href="#explore">Explore</a><a href="#education">Education</a><a href="#contact">Contact</a>
   </nav>
   <button class="menu" id="menu" aria-expanded="false">Menu</button>
 </header>
@@ -99,12 +104,12 @@ footer{padding:28px var(--pad);display:flex;justify-content:space-between;color:
 <main id="top">
 <section class="container hero">
   <div>
-    <div class="kicker">Data analyst, developer and designer</div>
+    <div class="kicker">Data analyst · Growing into AI &amp; ML</div>
     <h1>Harshal<br><em>Jain.</em></h1>
-    <p class="hero-intro">I turn raw data into clear decisions, then build and design the things around it.</p>
-    <p class="hero-small">Computer Science graduate with hands-on experience in data analysis, web development, design, content, sales and community leadership.</p>
-    <div class="cta"><a class="btn solid" href="#projects">View projects</a><a class="btn" href="#contact">Get in touch</a></div>
-    <div class="status">Open to analyst and MIS roles</div>
+    <p class="hero-intro">I turn raw data into clear decisions. Next, I want to build the models behind them.</p>
+    <p class="hero-small">Computer Science graduate and data analyst who also builds software, designs and talks to customers. Today <span class="rot" id="rot">Python, SQL and Excel</span>.</p>
+    <div class="cta"><a class="btn solid" href="#explore">Explore my work</a><a class="btn" href="#contact">Get in touch</a><button class="btn" id="resumeBtn">Download resume</button></div>
+    <div class="status">Open to analyst and MIS roles · Pune · Udaipur · Remote</div>
   </div>
   <div class="hero-photo">
     <div class="ph-back"></div>
@@ -113,110 +118,22 @@ footer{padding:28px var(--pad);display:flex;justify-content:space-between;color:
       <img src="professionalimage.png" alt="Harshal Jain portrait" onerror="this.style.display='none'">
     </div>
     <span class="float f1">Data analyst</span>
-    <span class="float f2">Python · SQL · Excel</span>
+    <span class="float f2">Future AI/ML developer</span>
     <span class="float f3">Pune · Udaipur</span>
   </div>
 </section>
 
-<section class="container section reveal" id="about">
-  <div class="section-head"><div><div class="section-kicker">About</div><h2>Data first.<br>Creative always.</h2></div></div>
-  <div class="about-grid">
-    <div>
-      <p class="large">I started in computer science, found my footing in data, and kept design, communication and leadership close. That mix lets me analyse a problem and explain it to the people who need to act on it.</p>
-      <div class="stats"><div><b>3+</b><span>years of design work</span></div><div><b>5</b><span>featured projects</span></div><div><b>4</b><span>sides to explore</span></div></div>
-    </div>
-    <p class="muted">I graduated in Computer Science Engineering in 2026 and I am now applying for analyst and MIS roles. I clean and understand data with Python and Excel, build tools in JavaScript, design in Canva and Figma, and I have worked in sales conversations and student leadership. Pick a side below to see how each one fits together.</p>
-  </div>
+<section class="container section reveal" id="explore" style="padding-top:60px">
+  <div class="section-head"><div><div class="section-kicker">Explore</div><h2>Five sides.<br>One person.</h2></div><div class="section-note">Pick a side. Each one holds the experience, projects, skills and certificates behind it.</div></div>
+  <div class="switch" id="sides" role="tablist" aria-label="Sides of my work"><span class="switch-pill" aria-hidden="true"></span></div>
+  <div id="panel" role="tabpanel"></div>
 </section>
 
-<section class="container section reveal" id="explore" style="padding-top:20px">
-  <div class="section-head"><div><div class="section-kicker">Explore</div><h2>Four sides.<br>Pick one.</h2></div><div class="section-note">Each side links to the projects, skills and experience behind it.</div></div>
-  <div class="switch" id="sides" role="tablist" aria-label="Sides of my work">
-    <span class="switch-pill" aria-hidden="true"></span>
-    <button class="on" role="tab" data-p="s-data">Data</button><button role="tab" data-p="s-tech">Tech</button><button role="tab" data-p="s-creative">Creative</button><button role="tab" data-p="s-sales">Sales</button>
-  </div>
-
-  <div class="panel active" id="s-data"><div class="about-grid" style="border:0;padding:0">
-    <div><p class="large">My main focus. I take messy data, understand what it says, and present it so a decision can be made.</p><button class="link" data-go="projects" data-filter="data">See data projects</button></div>
-    <ul class="points">
-      <li><b>Data cleaning and understanding</b><span>Fixing structure, handling missing values, finding what matters.</span></li>
-      <li><b>Dynamic Excel and MIS reports</b><span>Advanced Excel sheets that update as the data changes.</span></li>
-      <li><b>Analysis in Python</b><span>Pandas, NumPy and Matplotlib for exploration and visuals.</span></li>
-      <li><b>Prediction models</b><span>scikit-learn experiments on housing and stock data.</span></li>
-    </ul></div></div>
-
-  <div class="panel" id="s-tech"><div class="about-grid" style="border:0;padding:0">
-    <div><p class="large">I build working software, from websites for real businesses to computer-vision systems.</p><button class="link" data-go="projects" data-filter="tech">See tech projects</button></div>
-    <ul class="points">
-      <li><b>Web development</b><span>HTML, CSS and JavaScript sites and tools.</span></li>
-      <li><b>AI and computer vision</b><span>MediaPipe, CNNs and real-time prediction.</span></li>
-      <li><b>Databases and version control</b><span>MySQL, Git and GitHub.</span></li>
-    </ul></div></div>
-
-  <div class="panel" id="s-creative"><div class="about-grid" style="border:0;padding:0">
-    <div><p class="large">Design is how I communicate. I have made posters, social content and brand graphics for over three years.</p><button class="link" data-go="skills">See design skills</button></div>
-    <ul class="points">
-      <li><b>Visual design in Canva</b><span>Posters, social posts, event communication and branded content.</span></li>
-      <li><b>Editing and content</b><span>Basic photo and video editing, reels and content strategy.</span></li>
-      <li><b>UI and UX in Figma</b><span>Learning hierarchy, clarity and prototyping.</span></li>
-    </ul></div></div>
-
-  <div class="panel" id="s-sales"><div class="about-grid" style="border:0;padding:0">
-    <div><p class="large">I am comfortable talking to people, understanding what they need and explaining clearly how to get there.</p><button class="link" data-go="experience">See sales experience</button></div>
-    <ul class="points">
-      <li><b>Discovery conversations</b><span>Understanding goals before recommending anything.</span></li>
-      <li><b>Handling objections</b><span>Clear answers and honest follow-ups.</span></li>
-      <li><b>CRM workflows</b><span>Structured records of every customer conversation.</span></li>
-    </ul></div></div>
-</section>
-
-<section class="dark-section section reveal" id="projects">
-<div class="container">
-  <div class="section-head"><div><div class="section-kicker">Projects</div><h2>Built,<br>tested and shipped.</h2></div><div class="section-note">Filter by the side you want to see.</div></div>
-  <div class="filters" id="filters"><button class="on" data-f="all">All</button><button data-f="data">Data</button><button data-f="tech">Tech</button></div>
-  <div class="project" data-cat="tech"><span class="project-num">01</span><div><h3>Meenu’s, Udaipur</h3><p>Website for a family hospitality and cultural experience business, connecting cooking classes, walking tours and local experiences with a digital audience.</p></div><span class="project-tag">HTML · CSS · JavaScript</span></div>
-  <div class="project" data-cat="tech"><span class="project-num">02</span><div><h3>Dual-Mode Expression Interpreter</h3><p>Final-year project combining real-time sign-language and emotion understanding using MediaPipe, CNNs, landmark fusion and text-to-speech.</p></div><span class="project-tag">AI · Computer vision</span></div>
-  <div class="project" data-cat="tech"><span class="project-num">03</span><div><h3>Bill Generator</h3><p>Billing and invoice workflow with GST, discounts, item management and print-ready PDF output.</p></div><span class="project-tag">JavaScript</span></div>
-  <div class="project" data-cat="data"><span class="project-num">04</span><div><h3>House Price Prediction</h3><p>Explores housing features and compares predictive models for estimated property prices.</p></div><span class="project-tag">Python · ML</span></div>
-  <div class="project" data-cat="data"><span class="project-num">05</span><div><h3>Stock Price Prediction</h3><p>Stock trends and correlations, followed by prediction experiments with a Random Forest model.</p></div><span class="project-tag">Python · Colab</span></div>
-  <div style="border-top:1px solid #373633"></div>
-</div>
-</section>
-
-<section class="container section reveal" id="skills">
-  <div class="section-head"><div><div class="section-kicker">Skills</div><h2>The toolkit.</h2></div><div class="section-note">Grouped by side.</div></div>
+<section class="container section reveal" id="education" style="padding-top:20px">
+  <div class="section-head"><div><div class="section-kicker">Education</div><h2>Where I<br>studied.</h2></div></div>
   <div class="grid2">
-    <article class="cell"><div class="meta">Data</div><h3>Analysis and reporting</h3><div class="chips"><span class="chip">Python</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">scikit-learn</span><span class="chip">SQL</span><span class="chip">Advanced Excel</span><span class="chip">Data cleaning</span></div></article>
-    <article class="cell"><div class="meta">Tech</div><h3>Development</h3><div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">MySQL</span><span class="chip">Git and GitHub</span><span class="chip">Machine learning</span></div></article>
-    <article class="cell"><div class="meta">Creative</div><h3>Design and content</h3><div class="chips"><span class="chip">Canva</span><span class="chip">Figma</span><span class="chip">UI/UX basics</span><span class="chip">Photo and video editing</span><span class="chip">Social media content</span></div></article>
-    <article class="cell"><div class="meta">People</div><h3>Communication</h3><div class="chips"><span class="chip">Presentation</span><span class="chip">Client conversations</span><span class="chip">Team leadership</span><span class="chip">Event coordination</span></div></article>
-  </div>
-</section>
-
-<section class="container section reveal" id="experience" style="padding-top:20px">
-  <div class="section-head"><div><div class="section-kicker">Experience</div><h2>Where I<br>have worked.</h2></div></div>
-  <div class="timeline">
-    <div class="role"><span class="date">2026</span><div><h3>Intellipaat · Career Counselor, Inside Sales</h3><p>Spoke with prospective learners, understood their goals, explained programs, handled objections and kept structured records in a CRM.</p></div><span class="type">Sales</span></div>
-    <div class="role"><span class="date">Ongoing</span><div><h3>Freelance designer</h3><p>Canva-based posters, social posts and branded graphics, plus basic photo and video editing.</p></div><span class="type">Creative</span></div>
-  </div>
-</section>
-
-<section class="container section reveal" id="activities" style="padding-top:20px">
-  <div class="section-head"><div><div class="section-kicker">Co-curriculars</div><h2>Beyond<br>the classroom.</h2></div></div>
-  <div class="timeline">
-    <div class="role"><span class="date">2024 — 2026</span><div><h3>ED Cell · Social media and content</h3><p>Content creation, event promotion, branding and coordination for entrepreneurship activities at DYPIEMR.</p></div><span class="type">Creative</span></div>
-    <div class="role"><span class="date">2023 — 2024</span><div><h3>Rotaract Club · Vice President</h3><p>Event planning, team coordination and community initiatives with student volunteers.</p></div><span class="type">Leadership</span></div>
-    <div class="role"><span class="date">Campus</span><div><h3>Outreach and sponsorship</h3><p>Event outreach, sponsorship conversations and stakeholder communication through student clubs.</p></div><span class="type">Outreach</span></div>
-  </div>
-</section>
-
-<section class="container section reveal" id="credentials" style="padding-top:20px">
-  <div class="section-head"><div><div class="section-kicker">Credentials</div><h2>Education and<br>certifications.</h2></div></div>
-  <div class="grid2">
-    <article class="cell"><div class="meta">2022 — 2026</div><h3>B.E. Computer Science Engineering</h3><p>Dr. D. Y. Patil Institute of Engineering, Management and Research, Pune. 7.44 CGPA.</p></article>
-    <article class="cell"><div class="meta">Udemy · 2025</div><h3>100 Days of Code: Python</h3><p>Python programming course by Dr. Angela Yu.</p></article>
-    <article class="cell"><div class="meta">ICDAI-2026</div><h3>Co-authored survey paper</h3><p>Research paper written with four co-authors.</p></article>
-    <article class="cell"><div class="meta">Self-learning</div><h3>Python for Data Analytics</h3><p>Pandas, NumPy, Matplotlib, SQL and exploratory analysis.</p></article>
+    <article class="cell"><div class="meta">2022 — 2026</div><h3>B.E. Computer Science Engineering</h3><p>Dr. D. Y. Patil Institute of Engineering, Management and Research, Akurdi, Pune (SPPU). 7.44 CGPA.</p></article>
+    <article class="cell"><div class="meta">10th and 12th</div><h3>Maharana Mewar Public School</h3><p>Udaipur, Rajasthan.</p></article>
   </div>
 </section>
 </main>
@@ -226,41 +143,83 @@ footer{padding:28px var(--pad);display:flex;justify-content:space-between;color:
   <div class="section-kicker">Contact</div>
   <h2>Let’s make<br>something useful.</h2>
   <a class="contact-mail" href="mailto:harshaljainudaipur11@gmail.com">harshaljainudaipur11@gmail.com</a>
-  <div class="social-row"><a href="https://www.linkedin.com/in/harshaljain978/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/harshaljain978" target="_blank" rel="noopener">GitHub</a><a href="https://www.instagram.com/21fps.harshal/?hl=en" target="_blank" rel="noopener">Instagram</a></div>
+  <div class="social-row"><a href="tel:+917231007376">+91 72310 07376</a><a href="https://www.linkedin.com/in/harshaljain978/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/harshaljain978" target="_blank" rel="noopener">GitHub</a><a href="https://www.instagram.com/21fps.harshal/?hl=en" target="_blank" rel="noopener">Instagram</a><button id="copyMail">Copy email</button></div>
+  <form class="msg" id="msg"><input name="n" placeholder="Your name" required><input name="e" type="email" placeholder="Your email" required><textarea name="m" rows="3" placeholder="Role or message" required></textarea><button class="btn solid" type="submit">Send note</button></form>
 </div>
 </section>
 <footer><span>© <span id="year"></span> Harshal Jain</span><span>Pune · Udaipur · India</span></footer>
 
+<section id="resume" aria-hidden="true">
+  <h1>Harshal Jain</h1><div class="sub">Data Analyst · MIS · Aspiring AI/ML Developer — Pune, India<br>harshaljainudaipur11@gmail.com · +91 72310 07376 · linkedin.com/in/harshaljain978 · github.com/harshaljain978</div>
+  <h2>Summary</h2><p>Computer Science engineer (2026) with internships in data analysis, AI/ML and web development, plus sales, design and leadership experience. Seeking analyst and MIS roles, growing towards AI/ML.</p>
+  <h2>Skills</h2><p><b>Data:</b> Python, Pandas, NumPy, Matplotlib, scikit-learn, SQL, Advanced Excel (dynamic sheets), Power BI, data cleaning. <b>Tech:</b> HTML, CSS, JavaScript, MySQL, Git, MediaPipe. <b>Design:</b> Canva, photo and video editing, motion.</p>
+  <h2>Experience</h2>
+  <div class="r"><span><b>Data Analyst Intern</b>, Wisdom Sprouts</span><span>6 months</span></div>
+  <div class="r"><span><b>AI/ML Intern</b>, Wisdom Sprouts</span><span>1 month</span></div>
+  <div class="r"><span><b>Web Developer Intern (front end)</b>, National Fire Protection and Software Engineer</span><span>2 months</span></div>
+  <div class="r"><span><b>Career Counselor, Inside Sales</b>, Intellipaat</span><span>3 months</span></div>
+  <div class="r"><span><b>Sales</b>, House of EdTech, Hinjewadi</span><span>1 month</span></div>
+  <h2>Projects</h2>
+  <ul><li><b>Dual-Mode Expression Interpreter</b> — sign language and emotion detection in one model (MediaPipe, CNNs).</li><li><b>House Price Prediction</b> and <b>Stock Price Prediction</b> — Python, scikit-learn, Random Forest.</li><li><b>Meenu’s website</b> and <b>Bill Generator</b> — HTML, CSS, JavaScript.</li></ul>
+  <h2>Education</h2><div class="r"><span><b>B.E. Computer Science Engineering</b>, DYPIEMR, Pune (SPPU) — CGPA 7.44</span><span>2022 – 2026</span></div><div class="r"><span>10th and 12th, Maharana Mewar Public School, Udaipur</span><span></span></div>
+  <h2>Leadership, Research and Certifications</h2><ul><li>NASSCOM ambassador (Year 1); Vice President, Rotaract Club (Year 2); Social media and content manager, ED Cell (Year 3).</li><li>Lead author, ICDAI-2026 conference paper on sign language and emotion detection.</li><li>100 Days of Code: Python (Udemy); Data analyst certification.</li></ul>
+</section>
+
+<div class="toast" id="toast"></div>
 <script>
 (()=>{
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const toast=t=>{const e=$('#toast');e.textContent=t;e.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>e.classList.remove('show'),2400)};
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
 $$('.reveal').forEach(e=>io.observe(e));
 $('#year').textContent=new Date().getFullYear();
 
-const sw=$('#sides'),pill=$('.switch-pill',sw),tabs=$$('button',sw);
+const D=[
+['Data','My main side. I take messy data, understand what it says, and present it so a decision can be made.',['Python','Pandas','NumPy','Matplotlib','scikit-learn','SQL','Advanced Excel','Power BI','Data cleaning'],[
+ ['Experience',[['Data Analyst Intern · Wisdom Sprouts','Cleaning, understanding and analysing real data, and presenting what it shows.','6 months']]],
+ ['Projects',[['House Price Prediction','Explores housing features and compares models for estimated property prices.','Python · ML'],['Stock Price Prediction','Stock trends and correlations, then prediction experiments with a Random Forest model.','Python · Colab']]],
+ ['Certifications',[['100 Days of Code: Python','Udemy bootcamp by Dr. Angela Yu.','Udemy'],['Data analyst certification','Analysis, visualisation and reporting.','Certificate']]]]],
+['Tech','I build working software, from websites for real businesses to computer vision that reads people.',['HTML','CSS','JavaScript','MySQL','Git and GitHub','MediaPipe','Machine learning'],[
+ ['Experience',[['Web Developer Intern · NFPSE','Front-end development at National Fire Protection and Software Engineer.','2 months'],['AI/ML Intern · Wisdom Sprouts','Hands-on machine learning work.','1 month']]],
+ ['Projects',[['Dual-Mode Expression Interpreter','Final-year project that detects sign language and emotion together in one model, using MediaPipe, CNNs and text-to-speech.','AI · Vision'],['Meenu’s, Udaipur','Website for our family hospitality and cultural experience business, running since 1995.','Web'],['Bill Generator','Billing with GST, discounts and print-ready PDF output.','JavaScript']]]]],
+['Creative','Design is how I communicate. I edit, design and tell stories visually.',['Canva','Figma','Photo editing','Video editing','Motion','Social media content'],[
+ ['Work',[['Photo and video editing','Reels, clips and photo edits with a sense of pacing and detail.','Editing'],['Canva design','Presentations, documents, posters and a few motion pieces.','Design'],['Freelance designer','Branded graphics and social content for clients.','Ongoing']]]]],
+['Sales','I like talking to people, understanding what they need and explaining clearly how to get there.',['Discovery calls','Objection handling','CRM','Presentation'],[
+ ['Experience',[['Career Counselor, Inside Sales · Intellipaat','Spoke to prospective learners, explained programs, handled objections and kept CRM records.','3 months'],['Sales · House of EdTech, Hinjewadi','Real customer conversations in a fast sales floor.','1 month']]]]],
+['Beyond','My college journey, year by year.',['Leadership','Event coordination','Content'],[
+ ['Four years',[['Year 1 · NASSCOM ambassador','Represented NASSCOM programs on campus.','2022'],['Year 2 · Vice President, Rotaract Club','Led teams, events and community initiatives.','2023'],['Year 3 · Social media and content manager, ED Cell','Branding, posters and promotion for entrepreneurship events.','2024'],['Year 4 · Coding and final-year project','Built the Dual-Mode Expression Interpreter and published a conference paper on sign language and emotion detection as lead author.','ICDAI-2026']]]]]];
+const sw=$('#sides'),pill=$('.switch-pill',sw),panel=$('#panel');let cur=0;
+sw.insertAdjacentHTML('beforeend',D.map((d,i)=>`<button role="tab" data-i="${i}">${d[0]}</button>`).join(''));
+const tabs=$$('button',sw);
 const place=b=>{pill.style.width=b.offsetWidth+'px';pill.style.transform=`translateX(${b.offsetLeft-4}px)`};
-tabs.forEach(b=>b.onclick=()=>{tabs.forEach(t=>t.classList.toggle('on',t===b));$$('.panel').forEach(p=>p.classList.toggle('active',p.id===b.dataset.p));place(b)});
-place(tabs[0]);addEventListener('resize',()=>place($('.on',sw)));
+const show=i=>{cur=i;const d=D[i],nx=D[(i+1)%D.length][0];
+ tabs.forEach((t,k)=>{t.classList.toggle('on',k===i);t.setAttribute('aria-selected',k===i)});place(tabs[i]);
+ panel.innerHTML=`<div class="about-grid in-p" style="border:0;padding:0"><div><p class="large">${d[1]}</p><div class="chips">${d[2].map(c=>`<span class="chip">${c}</span>`).join('')}</div><button class="link" data-n="${(i+1)%D.length}">Next: ${nx} →</button></div><div>${d[3].map(g=>`<div class="g"><h4>${g[0]}</h4><ul class="points">${g[1].map(x=>`<li><b>${x[0]}<i>${x[2]}</i></b><span>${x[1]}</span></li>`).join('')}</ul></div>`).join('')}</div></div>`;
+ $('.link',panel).onclick=e=>{show(+e.target.dataset.n);$('#explore').scrollIntoView({behavior:'smooth'})}};
+tabs.forEach((b,i)=>b.onclick=()=>show(i));
+sw.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=(cur+(e.key==='ArrowRight'?1:D.length-1))%D.length;show(n);tabs[n].focus()}});
+show(0);addEventListener('resize',()=>place(tabs[cur]));
 
-const fb=$$('#filters button'),pr=$$('.project');
-const filt=f=>{fb.forEach(b=>b.classList.toggle('on',b.dataset.f===f));pr.forEach(p=>p.hidden=f!=='all'&&p.dataset.cat!==f)};
-fb.forEach(b=>b.onclick=()=>filt(b.dataset.f));
-$$('[data-go]').forEach(b=>b.onclick=()=>{if(b.dataset.filter)filt(b.dataset.filter);else filt('all');document.getElementById(b.dataset.go).scrollIntoView({behavior:'smooth'})});
+// hero line rotation
+const r=$('#rot'),L=['Python, SQL and Excel','dashboards in Power BI','and next, machine learning'];let k=0;
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches)setInterval(()=>{r.classList.add('o');setTimeout(()=>{k=(k+1)%L.length;r.textContent=L[k];r.classList.remove('o')},600)},3200);
 
 const nl=$('#navlinks'),mb=$('#menu');
 mb.onclick=()=>{const o=nl.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu'};
 $$('a',nl).forEach(a=>a.onclick=()=>{nl.classList.remove('open');mb.textContent='Menu'});
 const secs=$$('section[id]').filter(s=>$(`a[href="#${s.id}"]`,nl));
-const bar=$('#progress');
-const onScroll=()=>{const h=document.documentElement;bar.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';let cur='';secs.forEach(s=>{if(s.getBoundingClientRect().top<innerHeight*.4)cur=s.id});$$('a',nl).forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur))};
-addEventListener('scroll',onScroll,{passive:true});onScroll();
+const bar=$('#progress');let tick=false;
+const onScroll=()=>{tick=false;const h=document.documentElement;bar.style.transform=`scaleX(${h.scrollTop/(h.scrollHeight-h.clientHeight)||0})`;let c='';secs.forEach(s=>{if(s.getBoundingClientRect().top<innerHeight*.4)c=s.id});$$('a',nl).forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+c))};
+addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
 
 const fr=$('#frame');
 if(matchMedia('(hover:hover)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
- fr.parentElement.addEventListener('mousemove',e=>{const r=fr.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;fr.style.transform=`perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg)`});
+ fr.parentElement.addEventListener('mousemove',e=>{const b=fr.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;fr.style.transform=`perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg)`});
  fr.parentElement.addEventListener('mouseleave',()=>fr.style.transform='');
 }
+$('#resumeBtn').onclick=()=>{toast('Choose “Save as PDF” in the print dialog');setTimeout(()=>print(),700)};
+$('#copyMail').onclick=()=>navigator.clipboard.writeText('harshaljainudaipur11@gmail.com').then(()=>toast('Email copied'),()=>toast('Copy failed'));
+$('#msg').onsubmit=e=>{e.preventDefault();const f=e.target;location.href=`mailto:harshaljainudaipur11@gmail.com?subject=${encodeURIComponent('Portfolio note from '+f.n.value)}&body=${encodeURIComponent(f.m.value+'\n\n'+f.n.value+' ('+f.e.value+')')}`;toast('Opening your email app');f.reset()};
 })();
 </script>
 </body></html>
